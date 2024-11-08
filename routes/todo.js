@@ -9,14 +9,13 @@ let todos = [
     id : 2, task : "Membuat API", completed : false
     },
     {
-        id: 2, 
+        id: 3, 
         task: "Membuat API", 
         completed: false,
         priority: "Medium",
         dueDate: "2024-12-05" 
     },
 ];
-
 
 // Endpoint untuk mendapatkan data todos 
 router.get('/', (req, res) => {res.json(todos); });
