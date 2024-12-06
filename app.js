@@ -25,6 +25,12 @@ app.use('/', authRoutes);
 app.use('/todos', todoRoutes);
 app.set('view engine' , 'ejs');
 
+app.get('/login', (req, res) => {
+    res.render('login', {
+        layout: 'layouts/main-layout',
+    });
+});
+
 app.get('/', isAuthenticated, (req, res) => {
     res.render('index', {
         layout : 'layouts/main-layout'
